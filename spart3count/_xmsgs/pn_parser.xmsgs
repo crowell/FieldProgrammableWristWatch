@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/BCD_LED1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/BCD_MUX1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/OneTenMux.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/PushButton_Debouncer.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/clock1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/clockCounter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/counter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/fast_clock.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/minuteClk.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/spart3count.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1062" ><arg fmt="%s" index="1">Parsing Verilog file &quot;X:/EC311/spart3count/stopstart.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="6">
+	<FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+		<Filter Type="Srcs"/>
+		<Root Path="X:/Desktop/EC311_Labs/spart3count/OneTenMux.v">
+		</Root>
+		<Root Path="X:/Desktop/EC311_Labs/spart3count/fast_clock.v">
+		</Root>
+		<Root Path="X:/Desktop/EC311_Labs/spart3count/clk_divider.v">
+		</Root>
+		<Root Path="X:/Desktop/EC311_Labs/spart3count/BCD_MUX1.v">
+		</Root>
+		<Root Path="X:/Desktop/EC311_Labs/spart3count/BCD_LED1.v">
+		</Root>
+		<Root Path="X:/Desktop/EC311_Labs/spart3count/spart3count.v">
+		</Root>
+		<Config>
+			<Option Name="DesignMode" Val="RTL"/>
+			<Option Name="TopModule" Val="spart3count"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

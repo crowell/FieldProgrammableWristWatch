@@ -1,0 +1,12 @@
+MO PushButton_Debouncer NULL PushButton_Debouncer.v vlg62/_push_button___debouncer.bin 1302024782
+MO OneTenMux NULL OneTenMux.v vlg47/_one_ten_mux.bin 1302024782
+MO minuteClk NULL minuteClk.v vlg70/minute_clk.bin 1302024782
+MO stopstart NULL stopstart.v vlg1C/stopstart.bin 1302024781
+MO spart3count NULL spart3count.v vlg66/spart3count.bin 1302024794
+MO clk_divider NULL clk_divider.v vlg70/clk__divider.bin 1301361679
+MO BCD_LED1 NULL BCD_LED1.v vlg56/_b_c_d___l_e_d1.bin 1302024792
+MO clock1 NULL clock1.v vlg51/clock1.bin 1302024788
+MO counter NULL counter.v vlg10/counter.bin 1302024787
+MO fast_clock NULL fast_clock.v vlg15/fast__clock.bin 1302024784
+MO BCD_MUX1 NULL BCD_MUX1.v vlg47/_b_c_d___m_u_x1.bin 1302024792
+MO clockCounter NULL clockCounter.v vlg10/clock_counter.bin 1302024788
