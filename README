@@ -1,0 +1,5 @@
+Clock300 is a digital alarm clock/stopwatch, written in verilog, for the spartan3 educational boards, as a final project for the EC311 - Intro to Logic Design
+
+Currently only the digital clock and stopwatch modes are implemented.  
+
+The code would be easily portable to other FPGAs, but the clocks would be all off, for your reference, the Spartan3 used has a 50MHz clock.
