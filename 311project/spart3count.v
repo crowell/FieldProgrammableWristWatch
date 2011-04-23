@@ -18,14 +18,16 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module spart3count(LED,uclock,AN, buttons, switch,switch2);
+module spart3count(LED,uclock,AN, buttons, switch,switch2,alarmSwitch,alarmStatus,alarmRing,buzzer,buzzer2,cdswitch);
 input uclock;
 output [6:0] LED;
 output [3:0] AN;
 input [3:0] buttons;
-input switch,switch2;
+input switch,switch2,alarmSwitch,cdswitch;
+output wire alarmStatus, alarmRing, buzzer,buzzer2;
 
-wire [3:0] muxout,a,b,c,d,e,f,num0,num1,num2,num3;
+
+wire [3:0] muxout,a,b,c,d,e,f,num0,num1,num2,num3,a0,a1,a2,a3,cd0,cd1,cd2,cd3;
 wire [7:0] hh;
 wire [6:0] ii;
 wire [6:0] LED;
@@ -43,6 +45,11 @@ fast_clock fast_clk(uclock,fastclk);// SUPER fast for the leds
 clock1 clock_1(uclock,clock);			// 1/10 seconds for stopwatch
 minuteClk minuteClk(clock,minclk);    // 1 minute for actual clock
 //////////////////////////////////////
+
+///////////ALARM/////////////////////////
+setAlarm setAlarm(b2state, b3state, uclock, switch, switch2,a0,a1,a2,a3);
+alarming alarming(alarmSwitch, alarmStatus, alarmRing, buzzer, uclock,a0,a1,a2,a3,num0,num1,num2,num3);
+/////////////////////////////////////////
 
 
 
@@ -71,11 +78,11 @@ clockCounter clkcnt(minclk,uclock,hh,ii,num0,num1,num2,num3); //for clock
 
 
 
-BCD_MUX1 BCDMUX1(a,b,c,d,num0,num1,num2,num3,fastclk,muxout,switch);
+BCD_MUX1 BCDMUX1(a,b,c,d,num0,num1,num2,num3,fastclk,muxout,switch,switch2,a0,a1,a2,a3);
 
 BCD_LED1 BCDLED1(muxout,LED);
 
-// FUCK YOU TIME MACHINE timeMachine timeMachine(b3state, userclock, y);
+
 
 
 
@@ -85,7 +92,8 @@ stopstart swstate(b0state, state, uclock);//
 ////////////////////////////////////////////
 
 
-//testing//
+//////////////////Countdown Timer /////////////////
+//countDown countDown(uclock,clock,cdswitch,switch2,switch,cd0,cd1,cd2,cd3,buzzer2,b2state,b3state);
 
 
 

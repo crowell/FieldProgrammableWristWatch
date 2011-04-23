@@ -49,7 +49,7 @@ end
 always @ (posedge clk_1Hz) 
 begin
 
-if (reset&&switch&&switch2) begin
+if (reset&&switch&&!switch2) begin
 	num0 = 0;
 	num1 = 0;
 	num2 = 0;
@@ -82,7 +82,7 @@ if(state==1||state==2 ) begin
 
 end
 
-if((state==0||state==4) && (switch && switch2)) begin
+if((state==0||state==4) && (switch && !switch2)) begin
 num0=num0;
 num1=num1;
 num2=num2;

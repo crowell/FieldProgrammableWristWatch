@@ -19,3 +19,7 @@ NET "buttons[2]" LOC = L13;
 NET "buttons[3]" LOC = L14;
 NET "switch" LOC = K13;
 NET "switch2" LOC = K14;
+NET "alarmSwitch" LOC = F12;
+NET "alarmStatus" LOC = P11;
+NET "alarmRing" LOC = K12;
+NET "buzzer" LOC = D5;

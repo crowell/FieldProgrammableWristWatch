@@ -41,7 +41,7 @@ signal = button2 ^ button3;
 
 always @ (posedge signal)
 	begin
-		if(button2 && (switch2 && !switch))
+		if(button2 && (!switch2 && !switch))
 			begin
 			n0and1 = n0and1+1'b1;
 				if ( n0and1 >= 60 ) 
@@ -51,7 +51,7 @@ always @ (posedge signal)
 			end
 
 			
-		else if (button3 && (switch2 && !switch))
+		else if (button3 && (!switch2 && !switch))
 			begin
 			n2and3 = n2and3+1'b1;
 			if (n2and3 >= 24)
