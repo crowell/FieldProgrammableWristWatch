@@ -1,8 +1,0 @@
-Release 12.1 Drc M.53d (nt)
-Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
-
-Thu Apr 21 16:34:06 2011
-
-drc -z spart3count.ncd spart3count.pcf
-
-DRC detected 0 errors and 0 warnings.

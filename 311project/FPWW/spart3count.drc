@@ -1,0 +1,14 @@
+Release 12.1 Drc M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Tue Apr 26 13:35:29 2011
+
+drc -z spart3count.ncd spart3count.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net alarmBuzz_1/buzzer_not0001
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <alarmSwitch_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

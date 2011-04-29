@@ -1,0 +1,13 @@
+Release 12.1 - par M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Tue Apr 26 13:35:22 2011
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   alarmSwitch_IBUF
+
+

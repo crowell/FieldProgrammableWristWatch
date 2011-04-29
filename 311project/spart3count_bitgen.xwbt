@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=X:\Desktop\crowell-clock300-6205ca1\311project\spart3count.ncd
-OUTFILE=X:\Desktop\crowell-clock300-6205ca1\311project\spart3count.bit
-FAMILY=Spartan3
-PART=xc3s1000-5ft256
-WORKINGDIR=X:\Desktop\crowell-clock300-6205ca1\311project
-LICENSE=ISE
-USER_INFO=__174135685_174135686_174419191

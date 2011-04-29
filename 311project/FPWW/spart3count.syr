@@ -1,0 +1,1388 @@
+Release 12.1 - xst M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: spart3count.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "spart3count.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "spart3count"
+Output Format                      : NGC
+Target Device                      : xc3s1000-5-ft256
+
+---- Source Options
+Top Module Name                    : spart3count
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : spart3count.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "stopstart.v" in library work
+Compiling verilog file "setPulse.v" in library work
+Module <stopstart> compiled
+Compiling verilog file "setAlarm.v" in library work
+Module <setPulse> compiled
+Compiling verilog file "sclock.v" in library work
+Module <setAlarm> compiled
+Compiling verilog file "rebouncerslow.v" in library work
+Module <sclock> compiled
+Compiling verilog file "rebouncer.v" in library work
+Module <rebouncerslow> compiled
+Compiling verilog file "PushButton_Debouncer.v" in library work
+Module <rebouncer> compiled
+Compiling verilog file "OneTenMux.v" in library work
+Module <debounceIndex> compiled
+Compiling verilog file "msclock1.v" in library work
+Module <OneTenMux> compiled
+Compiling verilog file "modeSetter.v" in library work
+Module <msclock1> compiled
+Compiling verilog file "minuteClk.v" in library work
+Module <modeSetter> compiled
+Compiling verilog file "fast_clock.v" in library work
+Module <minuteClk> compiled
+Compiling verilog file "counter.v" in library work
+Module <fast_clock> compiled
+Compiling verilog file "countDown.v" in library work
+Module <counter> compiled
+Compiling verilog file "clockCounter.v" in library work
+Module <countDown> compiled
+Compiling verilog file "clockchange.v" in library work
+Module <clockCounter> compiled
+Compiling verilog file "clock1.v" in library work
+Module <clockchange> compiled
+Compiling verilog file "BCD_MUX1.v" in library work
+Module <clock1> compiled
+Compiling verilog file "BCD_LED1.v" in library work
+Module <BCD_MUX1> compiled
+Compiling verilog file "alarming.v" in library work
+Module <BCD_LED1> compiled
+Compiling verilog file "alarmBuzz.v" in library work
+Module <alarming> compiled
+Compiling verilog file "spart3count.v" in library work
+Module <alarmBuzz> compiled
+Module <spart3count> compiled
+WARNING:HDLCompilers:258 - "countDown.v" line 31 Range on redeclaration of 'num0' overrides range on output declaration at "countDown.v" line 25 
+WARNING:HDLCompilers:258 - "countDown.v" line 32 Range on redeclaration of 'num1' overrides range on output declaration at "countDown.v" line 26 
+WARNING:HDLCompilers:258 - "countDown.v" line 33 Range on redeclaration of 'num2' overrides range on output declaration at "countDown.v" line 27 
+WARNING:HDLCompilers:258 - "countDown.v" line 34 Range on redeclaration of 'num3' overrides range on output declaration at "countDown.v" line 28 
+No errors in compilation
+Analysis of file <"spart3count.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <spart3count> in library <work>.
+
+Analyzing hierarchy for module <fast_clock> in library <work>.
+
+Analyzing hierarchy for module <clock1> in library <work>.
+
+Analyzing hierarchy for module <sclock> in library <work>.
+
+Analyzing hierarchy for module <msclock1> in library <work>.
+
+Analyzing hierarchy for module <minuteClk> in library <work>.
+
+Analyzing hierarchy for module <setAlarm> in library <work>.
+
+Analyzing hierarchy for module <alarming> in library <work>.
+
+Analyzing hierarchy for module <debounceIndex> in library <work> with parameters.
+	DELAY = "00000000000001111010000100100000"
+
+Analyzing hierarchy for module <rebouncer> in library <work>.
+
+Analyzing hierarchy for module <rebouncerslow> in library <work>.
+
+Analyzing hierarchy for module <clockchange> in library <work>.
+
+Analyzing hierarchy for module <clockCounter> in library <work>.
+
+Analyzing hierarchy for module <setPulse> in library <work>.
+
+Analyzing hierarchy for module <modeSetter> in library <work>.
+
+Analyzing hierarchy for module <BCD_MUX1> in library <work>.
+
+Analyzing hierarchy for module <BCD_LED1> in library <work>.
+
+Analyzing hierarchy for module <OneTenMux> in library <work>.
+
+Analyzing hierarchy for module <stopstart> in library <work>.
+
+Analyzing hierarchy for module <counter> in library <work>.
+
+Analyzing hierarchy for module <alarmBuzz> in library <work>.
+
+Analyzing hierarchy for module <countDown> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <spart3count>.
+Module <spart3count> is correct for synthesis.
+ 
+Analyzing module <fast_clock> in library <work>.
+Module <fast_clock> is correct for synthesis.
+ 
+Analyzing module <clock1> in library <work>.
+Module <clock1> is correct for synthesis.
+ 
+Analyzing module <sclock> in library <work>.
+Module <sclock> is correct for synthesis.
+ 
+Analyzing module <msclock1> in library <work>.
+Module <msclock1> is correct for synthesis.
+ 
+Analyzing module <minuteClk> in library <work>.
+Module <minuteClk> is correct for synthesis.
+ 
+Analyzing module <setAlarm> in library <work>.
+Module <setAlarm> is correct for synthesis.
+ 
+Analyzing module <alarming> in library <work>.
+Module <alarming> is correct for synthesis.
+ 
+Analyzing module <debounceIndex> in library <work>.
+	DELAY = 32'sb00000000000001111010000100100000
+Module <debounceIndex> is correct for synthesis.
+ 
+Analyzing module <rebouncer> in library <work>.
+Module <rebouncer> is correct for synthesis.
+ 
+Analyzing module <rebouncerslow> in library <work>.
+Module <rebouncerslow> is correct for synthesis.
+ 
+Analyzing module <clockchange> in library <work>.
+Module <clockchange> is correct for synthesis.
+ 
+Analyzing module <clockCounter> in library <work>.
+Module <clockCounter> is correct for synthesis.
+ 
+Analyzing module <setPulse> in library <work>.
+Module <setPulse> is correct for synthesis.
+ 
+Analyzing module <modeSetter> in library <work>.
+Module <modeSetter> is correct for synthesis.
+ 
+Analyzing module <BCD_MUX1> in library <work>.
+Module <BCD_MUX1> is correct for synthesis.
+ 
+Analyzing module <BCD_LED1> in library <work>.
+Module <BCD_LED1> is correct for synthesis.
+ 
+Analyzing module <OneTenMux> in library <work>.
+Module <OneTenMux> is correct for synthesis.
+ 
+Analyzing module <stopstart> in library <work>.
+Module <stopstart> is correct for synthesis.
+ 
+Analyzing module <counter> in library <work>.
+Module <counter> is correct for synthesis.
+ 
+Analyzing module <alarmBuzz> in library <work>.
+WARNING:Xst:905 - "alarmBuzz.v" line 52: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <state>, <tobuzzer>, <waitTime>
+Module <alarmBuzz> is correct for synthesis.
+ 
+Analyzing module <countDown> in library <work>.
+Module <countDown> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <fast_clock>.
+    Related source file is "fast_clock.v".
+    Found 2-bit register for signal <clk_1hz>.
+    Found 26-bit comparator lessequal for signal <clk_1hz$cmp_le0000> created at line 45.
+    Found 26-bit comparator lessequal for signal <clk_1hz$cmp_le0001> created at line 49.
+    Found 26-bit comparator lessequal for signal <clk_1hz$cmp_le0002> created at line 53.
+    Found 26-bit up counter for signal <count>.
+    Found 26-bit comparator greatequal for signal <count$cmp_ge0000> created at line 36.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <fast_clock> synthesized.
+
+
+Synthesizing Unit <clock1>.
+    Related source file is "clock1.v".
+    Found 1-bit register for signal <clk_1hz>.
+    Found 26-bit comparator greatequal for signal <clk_1hz$cmp_ge0000> created at line 46.
+    Found 26-bit up counter for signal <count>.
+    Found 26-bit comparator greatequal for signal <count$cmp_ge0000> created at line 38.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <clock1> synthesized.
+
+
+Synthesizing Unit <sclock>.
+    Related source file is "sclock.v".
+    Found 1-bit register for signal <clk_1hz>.
+    Found 26-bit comparator greatequal for signal <clk_1hz$cmp_ge0000> created at line 46.
+    Found 26-bit up counter for signal <count>.
+    Found 26-bit comparator greatequal for signal <count$cmp_ge0000> created at line 38.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <sclock> synthesized.
+
+
+Synthesizing Unit <msclock1>.
+    Related source file is "msclock1.v".
+    Found 1-bit register for signal <clk_1hz>.
+    Found 26-bit comparator greatequal for signal <clk_1hz$cmp_ge0000> created at line 46.
+    Found 26-bit up counter for signal <count>.
+    Found 26-bit comparator greatequal for signal <count$cmp_ge0000> created at line 38.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <msclock1> synthesized.
+
+
+Synthesizing Unit <minuteClk>.
+    Related source file is "minuteClk.v".
+    Found 1-bit register for signal <clk_1hz>.
+    Found 32-bit comparator greatequal for signal <clk_1hz$cmp_ge0000> created at line 66.
+    Found 32-bit up counter for signal <count>.
+    Found 32-bit comparator greatequal for signal <count$cmp_ge0000> created at line 58.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <minuteClk> synthesized.
+
+
+Synthesizing Unit <setAlarm>.
+    Related source file is "setAlarm.v".
+WARNING:Xst:1780 - Signal <pressed> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit up counter for signal <num0>.
+    Found 4-bit up counter for signal <num1>.
+    Found 4-bit register for signal <num2>.
+    Found 4-bit register for signal <num3>.
+    Found 4-bit comparator greatequal for signal <num0$cmp_ge0000> created at line 56.
+    Found 4-bit comparator greatequal for signal <num1$cmp_ge0000> created at line 59.
+    Found 4-bit comparator greatequal for signal <num1$cmp_ge0001> created at line 56.
+    Found 4-bit comparator less for signal <num1$cmp_lt0000> created at line 56.
+    Found 4-bit subtractor for signal <num2$addsub0000>.
+    Found 7-bit up counter for signal <num2and3>.
+    Found 7-bit comparator greatequal for signal <num2and3$cmp_ge0000> created at line 75.
+    Found 7-bit comparator lessequal for signal <num3$cmp_le0000> created at line 39.
+    Found 7-bit comparator less for signal <num3$cmp_lt0000> created at line 43.
+    Found 4-bit adder for signal <old_num0_5$add0000> created at line 55.
+    Found 4-bit adder for signal <old_num1_6$add0000> created at line 58.
+    Found 7-bit adder for signal <old_num2and3_7$add0000> created at line 74.
+    Summary:
+	inferred   3 Counter(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+Unit <setAlarm> synthesized.
+
+
+Synthesizing Unit <alarming>.
+    Related source file is "alarming.v".
+    Register <buzzer> equivalent to <alarmRing> has been removed
+    Found 1-bit register for signal <alarmRing>.
+    Found 1-bit register for signal <alarmStatus>.
+    Found 4-bit comparator not equal for signal <alarmRing$cmp_ne0000> created at line 39.
+    Found 4-bit comparator not equal for signal <alarmRing$cmp_ne0001> created at line 39.
+    Found 4-bit comparator not equal for signal <alarmRing$cmp_ne0002> created at line 39.
+    Found 4-bit comparator not equal for signal <alarmRing$cmp_ne0003> created at line 39.
+    Found 1-bit register for signal <almstate>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <alarming> synthesized.
+
+
+Synthesizing Unit <debounceIndex>.
+    Related source file is "PushButton_Debouncer.v".
+    Found 1-bit register for signal <clean>.
+    Found 19-bit up counter for signal <count>.
+    Found 1-bit register for signal <new>.
+    Found 1-bit xor2 for signal <new$xor0000> created at line 10.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <debounceIndex> synthesized.
+
+
+Synthesizing Unit <rebouncer>.
+    Related source file is "rebouncer.v".
+    Found 1-bit register for signal <b2state>.
+    Found 26-bit comparator greatequal for signal <b2state$cmp_ge0000> created at line 47.
+    Found 26-bit comparator greatequal for signal <b2state$cmp_ge0001> created at line 56.
+    Found 1-bit register for signal <nextState>.
+    Found 26-bit comparator less for signal <nextState$cmp_lt0000> created at line 47.
+    Found 26-bit up counter for signal <pulseTime>.
+    Found 26-bit comparator greatequal for signal <pulseTime$cmp_ge0000> created at line 51.
+    Found 1-bit register for signal <state>.
+    Found 26-bit up counter for signal <waitTime>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <rebouncer> synthesized.
+
+
+Synthesizing Unit <rebouncerslow>.
+    Related source file is "rebouncerslow.v".
+    Found 1-bit register for signal <b2state>.
+    Found 26-bit comparator greatequal for signal <b2state$cmp_ge0000> created at line 48.
+    Found 26-bit comparator greatequal for signal <b2state$cmp_ge0001> created at line 57.
+    Found 1-bit register for signal <nextState>.
+    Found 26-bit comparator less for signal <nextState$cmp_lt0000> created at line 48.
+    Found 26-bit up counter for signal <pulseTime>.
+    Found 26-bit comparator greatequal for signal <pulseTime$cmp_ge0000> created at line 52.
+    Found 1-bit register for signal <state>.
+    Found 26-bit up counter for signal <waitTime>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <rebouncerslow> synthesized.
+
+
+Synthesizing Unit <clockchange>.
+    Related source file is "clockchange.v".
+    Found 7-bit up counter for signal <n2and3>.
+    Found 8-bit up counter for signal <n0and1>.
+    Found 8-bit comparator greatequal for signal <n0and1$cmp_ge0000> created at line 51.
+    Found 7-bit comparator greatequal for signal <n2and3$cmp_ge0000> created at line 61.
+    Found 8-bit adder for signal <old_n0and1_8$add0000> created at line 50.
+    Found 7-bit adder for signal <old_n2and3_9$add0000> created at line 60.
+    Found 1-bit register for signal <setState>.
+    Found 1-bit register for signal <signal>.
+    Found 1-bit xor2 for signal <signal$xor0000> created at line 44.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <clockchange> synthesized.
+
+
+Synthesizing Unit <clockCounter>.
+    Related source file is "clockCounter.v".
+    Found 4-bit register for signal <num0>.
+    Found 4-bit register for signal <num1>.
+    Found 4-bit register for signal <num2>.
+    Found 4-bit register for signal <num3>.
+    Found 8-bit up counter for signal <n0and1>.
+    Found 8-bit comparator greater for signal <n0and1$cmp_gt0000> created at line 157.
+    Found 7-bit up counter for signal <n2and3>.
+    Found 8-bit adder carry out for signal <n2and3$addsub0000> created at line 162.
+    Found 7-bit comparator greater for signal <n2and3$cmp_gt0000> created at line 165.
+    Found 8-bit comparator greater for signal <n2and3$cmp_gt0001> created at line 157.
+    Found 8-bit adder carry out for signal <num0$addsub0000> created at line 50.
+    Found 9-bit comparator less for signal <num0$cmp_lt0000> created at line 98.
+    Found 9-bit comparator less for signal <num0$cmp_lt0001> created at line 93.
+    Found 9-bit comparator less for signal <num0$cmp_lt0002> created at line 88.
+    Found 9-bit comparator less for signal <num0$cmp_lt0003> created at line 83.
+    Found 9-bit comparator less for signal <num0$cmp_lt0004> created at line 78.
+    Found 9-bit comparator less for signal <num0$cmp_lt0005> created at line 73.
+    Found 9-bit comparator less for signal <num0$cmp_lt0006> created at line 68.
+    Found 9-bit comparator less for signal <num0$cmp_lt0007> created at line 63.
+    Found 9-bit comparator less for signal <num0$cmp_lt0008> created at line 58.
+    Found 9-bit comparator less for signal <num0$cmp_lt0009> created at line 53.
+    Found 4-bit addsub for signal <num0$share0000>.
+    Found 9-bit comparator lessequal for signal <num1$cmp_le0000> created at line 43.
+    Found 9-bit comparator less for signal <num1$cmp_lt0000> created at line 48.
+    Found 7-bit adder carry out for signal <num2$addsub0000> created at line 116.
+    Found 8-bit comparator less for signal <num2$cmp_lt0000> created at line 137.
+    Found 8-bit comparator less for signal <num2$cmp_lt0001> created at line 131.
+    Found 8-bit comparator less for signal <num2$cmp_lt0002> created at line 125.
+    Found 8-bit comparator less for signal <num2$cmp_lt0003> created at line 119.
+    Found 4-bit addsub for signal <num2$mux0000>.
+    Found 8-bit comparator lessequal for signal <num3$cmp_le0000> created at line 109.
+    Found 8-bit comparator less for signal <num3$cmp_lt0000> created at line 114.
+    Found 8-bit adder for signal <old_n0and1_10$add0000> created at line 154.
+    Found 7-bit adder for signal <old_n2and3_11$add0000> created at line 164.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  21 Comparator(s).
+Unit <clockCounter> synthesized.
+
+
+Synthesizing Unit <setPulse>.
+    Related source file is "setPulse.v".
+    Found 4-bit register for signal <pnum0>.
+    Found 4-bit register for signal <pnum1>.
+    Found 4-bit register for signal <pnum2>.
+    Found 4-bit register for signal <pnum3>.
+    Found 26-bit comparator greatequal for signal <pnum0$cmp_ge0000> created at line 46.
+    Found 1-bit register for signal <pulsestate>.
+    Found 26-bit up counter for signal <pulseTime>.
+    Found 26-bit comparator greatequal for signal <pulseTime$cmp_ge0000> created at line 41.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <setPulse> synthesized.
+
+
+Synthesizing Unit <modeSetter>.
+    Related source file is "modeSetter.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 1-bit register for signal <modeName>.
+    Found 1-bit register for signal <switch2>.
+    Found 1-bit register for signal <switch>.
+    Found 8-bit register for signal <nextState>.
+    Found 8-bit register for signal <state>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+Unit <modeSetter> synthesized.
+
+
+Synthesizing Unit <BCD_MUX1>.
+    Related source file is "BCD_MUX1.v".
+WARNING:Xst:737 - Found 5-bit latch for signal <LED>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <BCD_MUX1> synthesized.
+
+
+Synthesizing Unit <BCD_LED1>.
+    Related source file is "BCD_LED1.v".
+    Found 32x7-bit ROM for signal <LED>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <BCD_LED1> synthesized.
+
+
+Synthesizing Unit <OneTenMux>.
+    Related source file is "OneTenMux.v".
+    Found 1-of-4 decoder for signal <AN>.
+    Summary:
+	inferred   1 Decoder(s).
+Unit <OneTenMux> synthesized.
+
+
+Synthesizing Unit <stopstart>.
+    Related source file is "stopstart.v".
+    Found 2-bit register for signal <state>.
+    Found 2-bit register for signal <next_state>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <stopstart> synthesized.
+
+
+Synthesizing Unit <counter>.
+    Related source file is "counter.v".
+    Found 4-bit register for signal <num0>.
+    Found 4-bit register for signal <num1>.
+    Found 4-bit register for signal <num2>.
+    Found 4-bit register for signal <num3>.
+    Found 4-bit comparator greatequal for signal <old_num0_20$cmp_ge0000> created at line 61.
+    Found 4-bit comparator greatequal for signal <old_num1_21$cmp_ge0000> created at line 65.
+    Found 4-bit comparator greatequal for signal <old_num2_22$cmp_ge0000> created at line 69.
+    Found 4-bit comparator greatequal for signal <old_num3_23$cmp_ge0000> created at line 73.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <counter> synthesized.
+
+
+Synthesizing Unit <alarmBuzz>.
+    Related source file is "alarmBuzz.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+WARNING:Xst:737 - Found 1-bit latch for signal <buzzer>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 10-bit comparator greatequal for signal <buzzer$cmp_ge0000> created at line 68.
+    Found 10-bit comparator greatequal for signal <buzzer$cmp_ge0001> created at line 66.
+    Found 10-bit comparator greatequal for signal <buzzer$cmp_ge0002> created at line 64.
+    Found 10-bit comparator greatequal for signal <buzzer$cmp_ge0003> created at line 62.
+    Found 10-bit comparator greatequal for signal <buzzer$cmp_ge0004> created at line 60.
+    Found 10-bit comparator greatequal for signal <buzzer$cmp_ge0005> created at line 58.
+    Found 10-bit comparator greatequal for signal <buzzer$cmp_ge0006> created at line 56.
+    Found 10-bit comparator greatequal for signal <nextState$cmp_ge0000> created at line 56.
+    Found 10-bit comparator less for signal <nextState$cmp_lt0000> created at line 70.
+    Found 10-bit comparator less for signal <nextState$cmp_lt0001> created at line 68.
+    Found 10-bit comparator less for signal <nextState$cmp_lt0002> created at line 66.
+    Found 10-bit comparator less for signal <nextState$cmp_lt0003> created at line 64.
+    Found 10-bit comparator less for signal <nextState$cmp_lt0004> created at line 62.
+    Found 10-bit comparator less for signal <nextState$cmp_lt0005> created at line 60.
+    Found 10-bit comparator less for signal <nextState$cmp_lt0006> created at line 58.
+    Found 10-bit comparator less for signal <nextState$cmp_lt0007> created at line 56.
+    Found 9-bit register for signal <state>.
+    Found 10-bit up counter for signal <waitTime>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   9 D-type flip-flop(s).
+	inferred  16 Comparator(s).
+Unit <alarmBuzz> synthesized.
+
+
+Synthesizing Unit <countDown>.
+    Related source file is "countDown.v".
+    Found 1-bit register for signal <buzzer>.
+    Found 1-bit register for signal <states>.
+    Found 5-bit down counter for signal <num0>.
+    Found 5-bit register for signal <num1>.
+    Found 5-bit register for signal <num2>.
+    Found 5-bit register for signal <num3>.
+    Found 6-bit comparator lessequal for signal <num0$cmp_le0000> created at line 54.
+    Found 6-bit comparator lessequal for signal <num0$cmp_le0001> created at line 54.
+    Found 6-bit comparator lessequal for signal <num0$cmp_le0002> created at line 54.
+    Found 6-bit comparator lessequal for signal <num0$cmp_le0003> created at line 54.
+    Found 6-bit comparator less for signal <num0$cmp_lt0000> created at line 56.
+    Found 6-bit comparator greatequal for signal <num1$cmp_ge0000> created at line 77.
+    Found 6-bit comparator greatequal for signal <num2$cmp_ge0000> created at line 80.
+    Found 6-bit comparator greatequal for signal <num3$cmp_ge0000> created at line 90.
+    Found 6-bit comparator greatequal for signal <num3$cmp_ge0001> created at line 82.
+    Found 6-bit comparator greater for signal <old_num1_28$cmp_gt0000> created at line 54.
+    Found 6-bit comparator greater for signal <old_num1_28$cmp_gt0001> created at line 54.
+    Found 6-bit comparator greater for signal <old_num1_28$cmp_gt0002> created at line 54.
+    Found 6-bit comparator greater for signal <old_num1_28$cmp_gt0003> created at line 54.
+    Found 6-bit comparator less for signal <old_num1_28$cmp_lt0000> created at line 59.
+    Found 6-bit comparator less for signal <old_num2_30$cmp_lt0000> created at line 62.
+    Found 6-bit comparator less for signal <old_num3_32$cmp_lt0000> created at line 65.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  16 Comparator(s).
+Unit <countDown> synthesized.
+
+
+Synthesizing Unit <spart3count>.
+    Related source file is "spart3count.v".
+WARNING:Xst:647 - Input <cdswitch> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <buzzer2> is never assigned.
+WARNING:Xst:647 - Input <alarmSwitch> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <sclock> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <f> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <e> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <spart3count> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+WARNING:Xst:524 - All outputs of the instance <sclock_1> of the block <sclock> are unconnected in block <spart3count>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 24
+ 4-bit adder                                           : 6
+ 4-bit addsub                                          : 2
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 3
+ 5-bit subtractor                                      : 4
+ 7-bit adder                                           : 3
+ 7-bit adder carry out                                 : 1
+ 8-bit adder                                           : 2
+ 8-bit adder carry out                                 : 2
+# Counters                                             : 22
+ 10-bit up counter                                     : 1
+ 19-bit up counter                                     : 4
+ 26-bit up counter                                     : 8
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+ 5-bit down counter                                    : 1
+ 7-bit up counter                                      : 3
+ 8-bit up counter                                      : 2
+# Registers                                            : 51
+ 1-bit register                                        : 28
+ 2-bit register                                        : 3
+ 4-bit register                                        : 14
+ 5-bit register                                        : 3
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 5-bit latch                                           : 1
+# Comparators                                          : 90
+ 10-bit comparator greatequal                          : 8
+ 10-bit comparator less                                : 8
+ 26-bit comparator greatequal                          : 13
+ 26-bit comparator less                                : 2
+ 26-bit comparator lessequal                           : 3
+ 32-bit comparator greatequal                          : 2
+ 4-bit comparator greatequal                           : 7
+ 4-bit comparator less                                 : 1
+ 4-bit comparator not equal                            : 4
+ 6-bit comparator greatequal                           : 4
+ 6-bit comparator greater                              : 4
+ 6-bit comparator less                                 : 4
+ 6-bit comparator lessequal                            : 4
+ 7-bit comparator greatequal                           : 2
+ 7-bit comparator greater                              : 1
+ 7-bit comparator less                                 : 1
+ 7-bit comparator lessequal                            : 1
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 2
+ 8-bit comparator less                                 : 5
+ 8-bit comparator lessequal                            : 1
+ 9-bit comparator less                                 : 11
+ 9-bit comparator lessequal                            : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <num3_2> in Unit <setAlarm> is equivalent to the following FF/Latch, which will be removed : <num3_3> 
+INFO:Xst:2261 - The FF/Latch <num3_2> in Unit <clkcnt> is equivalent to the following FF/Latch, which will be removed : <num3_3> 
+WARNING:Xst:1293 - FF/Latch <num3_2> has a constant value of 0 in block <setAlarm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <num3_2> (without init value) has a constant value of 0 in block <clkcnt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <num1_3> (without init value) has a constant value of 0 in block <clkcnt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pnum3_2> has a constant value of 0 in block <setPulse_01>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 24
+ 4-bit adder                                           : 6
+ 4-bit addsub                                          : 2
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 3
+ 5-bit subtractor                                      : 4
+ 7-bit adder                                           : 3
+ 7-bit adder carry out                                 : 1
+ 8-bit adder                                           : 2
+ 8-bit adder carry out                                 : 2
+# Counters                                             : 22
+ 10-bit up counter                                     : 1
+ 19-bit up counter                                     : 4
+ 26-bit up counter                                     : 8
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+ 5-bit down counter                                    : 1
+ 7-bit up counter                                      : 3
+ 8-bit up counter                                      : 2
+# Registers                                            : 130
+ Flip-Flops                                            : 130
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 5-bit latch                                           : 1
+# Comparators                                          : 90
+ 10-bit comparator greatequal                          : 8
+ 10-bit comparator less                                : 8
+ 26-bit comparator greatequal                          : 13
+ 26-bit comparator less                                : 2
+ 26-bit comparator lessequal                           : 3
+ 32-bit comparator greatequal                          : 2
+ 4-bit comparator greatequal                           : 7
+ 4-bit comparator less                                 : 1
+ 4-bit comparator not equal                            : 4
+ 6-bit comparator greatequal                           : 4
+ 6-bit comparator greater                              : 4
+ 6-bit comparator less                                 : 4
+ 6-bit comparator lessequal                            : 4
+ 7-bit comparator greatequal                           : 2
+ 7-bit comparator greater                              : 1
+ 7-bit comparator less                                 : 1
+ 7-bit comparator lessequal                            : 1
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 2
+ 8-bit comparator less                                 : 5
+ 8-bit comparator lessequal                            : 1
+ 9-bit comparator less                                 : 11
+ 9-bit comparator lessequal                            : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 5
+ 1-bit xor2                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <num3_2> has a constant value of 0 in block <setAlarm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <num3_3> has a constant value of 0 in block <setAlarm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <num3_2> (without init value) has a constant value of 0 in block <clockCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num3_3> (without init value) has a constant value of 0 in block <clockCounter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <num1_3> (without init value) has a constant value of 0 in block <clockCounter>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <spart3count> ...
+
+Optimizing unit <setAlarm> ...
+
+Optimizing unit <alarming> ...
+
+Optimizing unit <debounceIndex> ...
+
+Optimizing unit <rebouncer> ...
+
+Optimizing unit <rebouncerslow> ...
+
+Optimizing unit <clockchange> ...
+
+Optimizing unit <clockCounter> ...
+
+Optimizing unit <setPulse> ...
+
+Optimizing unit <modeSetter> ...
+
+Optimizing unit <stopstart> ...
+
+Optimizing unit <counter> ...
+WARNING:Xst:1293 - FF/Latch <num2_3> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <num2_3> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <alarmBuzz> ...
+
+Optimizing unit <countDown> ...
+
+Optimizing unit <BCD_MUX1> ...
+WARNING:Xst:1294 - Latch <LED_0> is equivalent to a wire in block <BCD_MUX1>.
+WARNING:Xst:1294 - Latch <LED_1> is equivalent to a wire in block <BCD_MUX1>.
+WARNING:Xst:1294 - Latch <LED_2> is equivalent to a wire in block <BCD_MUX1>.
+WARNING:Xst:1294 - Latch <LED_3> is equivalent to a wire in block <BCD_MUX1>.
+WARNING:Xst:1294 - Latch <LED_4> is equivalent to a wire in block <BCD_MUX1>.
+WARNING:Xst:1293 - FF/Latch <setPulse_01/pnum3_2> has a constant value of 0 in block <spart3count>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <setPulse_01/pnum3_3> in Unit <spart3count> is equivalent to the following FF/Latch, which will be removed : <setPulse_01/pnum1_3> 
+Found area constraint ratio of 100 (+ 5) on block spart3count, actual ratio is 7.
+FlipFlop countDown_01/buzzer has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 499
+ Flip-Flops                                            : 499
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : spart3count.ngr
+Top Level Output File Name         : spart3count
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 24
+
+Cell Usage :
+# BELS                             : 2084
+#      GND                         : 1
+#      INV                         : 73
+#      LUT1                        : 377
+#      LUT2                        : 122
+#      LUT2_D                      : 2
+#      LUT2_L                      : 2
+#      LUT3                        : 128
+#      LUT3_D                      : 7
+#      LUT3_L                      : 4
+#      LUT4                        : 346
+#      LUT4_D                      : 28
+#      LUT4_L                      : 11
+#      MUXCY                       : 578
+#      MUXF5                       : 39
+#      VCC                         : 1
+#      XORCY                       : 365
+# FlipFlops/Latches                : 500
+#      FD                          : 72
+#      FDE                         : 29
+#      FDR                         : 190
+#      FDRE                        : 187
+#      FDRS                        : 4
+#      FDRSE                       : 2
+#      FDS                         : 15
+#      LD                          : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 4
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-5 
+
+ Number of Slices:                      579  out of   7680     7%  
+ Number of Slice Flip Flops:            498  out of  15360     3%  
+ Number of 4 input LUTs:               1100  out of  15360     7%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  21  out of    173    12%  
+    IOB Flip Flops:                       2
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------+-----------------------------+-------+
+Clock Signal                                               | Clock buffer(FF name)       | Load  |
+-----------------------------------------------------------+-----------------------------+-------+
+uclock                                                     | BUFGP                       | 372   |
+clock_1/clk_1hz1                                           | BUFG                        | 68    |
+rebounce0/b2state                                          | NONE(setAlarm/num1_3)       | 8     |
+rebounce1/b2state                                          | NONE(setAlarm/num2and3_6)   | 7     |
+debounce0/clean                                            | NONE(alarming/almstate)     | 4     |
+clkchange/signal                                           | NONE(clkchange/n2and3_6)    | 15    |
+minuteClk/clk_1hz                                          | NONE(clkcnt/n0and1_7)       | 15    |
+msclock_1/clk_1hz                                          | NONE(alarmBuzz_1/waitTime_9)| 10    |
+alarmBuzz_1/buzzer_not0001(alarmBuzz_1/buzzer_not0001116:O)| NONE(*)(alarmBuzz_1/buzzer) | 1     |
+-----------------------------------------------------------+-----------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 10.597ns (Maximum Frequency: 94.371MHz)
+   Minimum input arrival time before clock: 4.340ns
+   Maximum output required time after clock: 16.203ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'uclock'
+  Clock period: 7.318ns (frequency: 136.645MHz)
+  Total number of paths / destination ports: 9362 / 788
+-------------------------------------------------------------------------
+Delay:               7.318ns (Levels of Logic = 14)
+  Source:            rebounce1/pulseTime_7 (FF)
+  Destination:       rebounce1/pulseTime_25 (FF)
+  Source Clock:      uclock rising
+  Destination Clock: uclock rising
+
+  Data Path: rebounce1/pulseTime_7 to rebounce1/pulseTime_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.626   1.066  rebounce1/pulseTime_7 (rebounce1/pulseTime_7)
+     LUT1:I0->O            1   0.479   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<0>_rt (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.435   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<0> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<1> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<2> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<3> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<4> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<5> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<6> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<7> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<8> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<9> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<10> (rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.265   0.976  rebounce1/Mcompar_pulseTime_cmp_ge0000_cy<11> (rebounce1/pulseTime_cmp_ge0000)
+     LUT3:I0->O           26   0.479   1.546  rebounce1/pulseTime_and00001 (rebounce1/pulseTime_and0000)
+     FDRE:R                    0.892          rebounce1/pulseTime_0
+    ----------------------------------------
+    Total                      7.318ns (3.731ns logic, 3.588ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_1/clk_1hz1'
+  Clock period: 10.597ns (frequency: 94.371MHz)
+  Total number of paths / destination ports: 6230 / 110
+-------------------------------------------------------------------------
+Delay:               10.597ns (Levels of Logic = 8)
+  Source:            countDown_01/num3_2 (FF)
+  Destination:       countDown_01/num3_0 (FF)
+  Source Clock:      clock_1/clk_1hz1 rising
+  Destination Clock: clock_1/clk_1hz1 rising
+
+  Data Path: countDown_01/num3_2 to countDown_01/num3_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.626   1.148  countDown_01/num3_2 (countDown_01/num3_2)
+     LUT4:I0->O            1   0.479   0.740  countDown_01/old_num1_28_or000037 (countDown_01/old_num1_28_or000037)
+     LUT4:I2->O            5   0.479   0.806  countDown_01/old_num1_28_or000048 (countDown_01/old_num1_28_or000048)
+     LUT4:I3->O            9   0.479   0.955  countDown_01/_old_num1_28<0>11_1 (countDown_01/_old_num1_28<0>11)
+     MUXF5:S->O            4   0.540   0.802  countDown_01/Madd__old_num1_29_cy<2>11 (countDown_01/Madd__old_num1_29_cy<2>)
+     LUT4:I3->O            6   0.479   0.912  countDown_01/num1_cmp_ge00001 (countDown_01/num1_cmp_ge0000)
+     LUT4:I2->O            1   0.479   0.704  countDown_01/num3_mux0000<1>143 (countDown_01/num3_mux0000<1>143)
+     LUT4:I3->O            1   0.479   0.000  countDown_01/num3_mux0000<4>1_G (N289)
+     MUXF5:I1->O           1   0.314   0.000  countDown_01/num3_mux0000<4>1 (countDown_01/num3_mux0000<4>)
+     FD:D                      0.176          countDown_01/num3_0
+    ----------------------------------------
+    Total                     10.597ns (4.530ns logic, 6.066ns route)
+                                       (42.7% logic, 57.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rebounce0/b2state'
+  Clock period: 6.923ns (frequency: 144.449MHz)
+  Total number of paths / destination ports: 164 / 20
+-------------------------------------------------------------------------
+Delay:               6.923ns (Levels of Logic = 3)
+  Source:            setAlarm/num0_0 (FF)
+  Destination:       setAlarm/num1_3 (FF)
+  Source Clock:      rebounce0/b2state rising
+  Destination Clock: rebounce0/b2state rising
+
+  Data Path: setAlarm/num0_0 to setAlarm/num1_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.626   1.148  setAlarm/num0_0 (setAlarm/num0_0)
+     LUT4:I0->O            2   0.479   0.915  setAlarm/Result<3>11 (setAlarm/Result<3>1)
+     LUT4:I1->O            9   0.479   1.125  setAlarm/num1_and000011 (setAlarm/num0_and0000)
+     LUT4:I1->O            4   0.479   0.779  setAlarm/num1_and00001 (setAlarm/num1_and0000)
+     FDRE:R                    0.892          setAlarm/num1_0
+    ----------------------------------------
+    Total                      6.923ns (2.955ns logic, 3.968ns route)
+                                       (42.7% logic, 57.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rebounce1/b2state'
+  Clock period: 6.774ns (frequency: 147.621MHz)
+  Total number of paths / destination ports: 182 / 14
+-------------------------------------------------------------------------
+Delay:               6.774ns (Levels of Logic = 4)
+  Source:            setAlarm/num2and3_3 (FF)
+  Destination:       setAlarm/num2and3_6 (FF)
+  Source Clock:      rebounce1/b2state rising
+  Destination Clock: rebounce1/b2state rising
+
+  Data Path: setAlarm/num2and3_3 to setAlarm/num2and3_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.626   1.148  setAlarm/num2and3_3 (setAlarm/num2and3_3)
+     LUT4_D:I0->LO         1   0.479   0.395  setAlarm/Madd_old_num2and3_7_add0000_cy<3>1 (N400)
+     LUT4:I0->O            2   0.479   0.768  setAlarm/Result<6>1 (setAlarm/Result<6>)
+     LUT4_L:I3->LO         1   0.479   0.123  setAlarm/num2and3_and0000_SW1 (N362)
+     LUT4:I3->O            7   0.479   0.906  setAlarm/num2and3_and0000 (setAlarm/num2and3_and0000)
+     FDRE:R                    0.892          setAlarm/num2and3_0
+    ----------------------------------------
+    Total                      6.774ns (3.434ns logic, 3.340ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'debounce0/clean'
+  Clock period: 3.561ns (frequency: 280.794MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               3.561ns (Levels of Logic = 1)
+  Source:            setPulse_01/pulsestate (FF)
+  Destination:       setPulse_01/pulsestate (FF)
+  Source Clock:      debounce0/clean rising
+  Destination Clock: debounce0/clean rising
+
+  Data Path: setPulse_01/pulsestate to setPulse_01/pulsestate
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             37   0.626   1.599  setPulse_01/pulsestate (setPulse_01/pulsestate)
+     INV:I->O              1   0.479   0.681  setPulse_01/pulsestate_not00031_INV_0 (setPulse_01/pulsestate_not0003)
+     FDE:D                     0.176          setPulse_01/pulsestate
+    ----------------------------------------
+    Total                      3.561ns (1.281ns logic, 2.280ns route)
+                                       (36.0% logic, 64.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkchange/signal'
+  Clock period: 6.229ns (frequency: 160.551MHz)
+  Total number of paths / destination ports: 315 / 30
+-------------------------------------------------------------------------
+Delay:               6.229ns (Levels of Logic = 4)
+  Source:            clkchange/n0and1_2 (FF)
+  Destination:       clkchange/n0and1_7 (FF)
+  Source Clock:      clkchange/signal rising
+  Destination Clock: clkchange/signal rising
+
+  Data Path: clkchange/n0and1_2 to clkchange/n0and1_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.626   1.148  clkchange/n0and1_2 (clkchange/n0and1_2)
+     LUT4_L:I0->LO         1   0.479   0.123  clkchange/n0and1_and000050 (clkchange/n0and1_and000050)
+     LUT4:I3->O            2   0.479   0.768  clkchange/n0and1_and000066_SW0 (N292)
+     LUT4:I3->O            1   0.479   0.000  clkchange/n0and1_and0000781 (clkchange/n0and1_and000078)
+     MUXF5:I1->O           8   0.314   0.921  clkchange/n0and1_and000078_f5 (clkchange/n0and1_and0000)
+     FDRE:R                    0.892          clkchange/n0and1_0
+    ----------------------------------------
+    Total                      6.229ns (3.269ns logic, 2.960ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'minuteClk/clk_1hz'
+  Clock period: 8.878ns (frequency: 112.644MHz)
+  Total number of paths / destination ports: 2524 / 23
+-------------------------------------------------------------------------
+Delay:               8.878ns (Levels of Logic = 9)
+  Source:            clkcnt/n0and1_3 (FF)
+  Destination:       clkcnt/n2and3_1 (FF)
+  Source Clock:      minuteClk/clk_1hz rising
+  Destination Clock: minuteClk/clk_1hz rising
+
+  Data Path: clkcnt/n0and1_3 to clkcnt/n2and3_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.626   1.148  clkcnt/n0and1_3 (clkcnt/n0and1_3)
+     LUT4:I0->O            1   0.479   0.851  clkcnt/Madd_old_n0and1_10_add0000_xor<3>11 (clkcnt/old_n0and1_10_add0000<3>)
+     LUT2:I1->O            1   0.479   0.000  clkcnt/Madd_n2and3_addsub0000_lut<3> (clkcnt/Madd_n2and3_addsub0000_lut<3>)
+     MUXCY:S->O            1   0.435   0.000  clkcnt/Madd_n2and3_addsub0000_cy<3> (clkcnt/Madd_n2and3_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  clkcnt/Madd_n2and3_addsub0000_cy<4> (clkcnt/Madd_n2and3_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  clkcnt/Madd_n2and3_addsub0000_cy<5> (clkcnt/Madd_n2and3_addsub0000_cy<5>)
+     XORCY:CI->O           1   0.786   0.704  clkcnt/Madd_n2and3_addsub0000_xor<6> (clkcnt/n2and3_addsub0000<6>)
+     LUT4_D:I3->O          2   0.479   0.804  clkcnt/n2and3_cmp_eq00007 (clkcnt/n2and3_cmp_eq00007)
+     LUT4_D:I2->O          5   0.479   0.842  clkcnt/n2and3_not00011 (clkcnt/n2and3_not0001)
+     LUT4:I2->O            1   0.479   0.000  clkcnt/n2and3_1_rstpot (clkcnt/n2and3_1_rstpot)
+     FD:D                      0.176          clkcnt/n2and3_1
+    ----------------------------------------
+    Total                      8.878ns (4.529ns logic, 4.349ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'msclock_1/clk_1hz'
+  Clock period: 3.995ns (frequency: 250.310MHz)
+  Total number of paths / destination ports: 55 / 10
+-------------------------------------------------------------------------
+Delay:               3.995ns (Levels of Logic = 8)
+  Source:            alarmBuzz_1/waitTime_3 (FF)
+  Destination:       alarmBuzz_1/waitTime_9 (FF)
+  Source Clock:      msclock_1/clk_1hz rising
+  Destination Clock: msclock_1/clk_1hz rising
+
+  Data Path: alarmBuzz_1/waitTime_3 to alarmBuzz_1/waitTime_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.626   1.216  alarmBuzz_1/waitTime_3 (alarmBuzz_1/waitTime_3)
+     LUT1:I0->O            1   0.479   0.000  alarmBuzz_1/Mcount_waitTime_cy<3>_rt (alarmBuzz_1/Mcount_waitTime_cy<3>_rt)
+     MUXCY:S->O            1   0.435   0.000  alarmBuzz_1/Mcount_waitTime_cy<3> (alarmBuzz_1/Mcount_waitTime_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  alarmBuzz_1/Mcount_waitTime_cy<4> (alarmBuzz_1/Mcount_waitTime_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  alarmBuzz_1/Mcount_waitTime_cy<5> (alarmBuzz_1/Mcount_waitTime_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  alarmBuzz_1/Mcount_waitTime_cy<6> (alarmBuzz_1/Mcount_waitTime_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  alarmBuzz_1/Mcount_waitTime_cy<7> (alarmBuzz_1/Mcount_waitTime_cy<7>)
+     MUXCY:CI->O           0   0.056   0.000  alarmBuzz_1/Mcount_waitTime_cy<8> (alarmBuzz_1/Mcount_waitTime_cy<8>)
+     XORCY:CI->O           1   0.786   0.000  alarmBuzz_1/Mcount_waitTime_xor<9> (alarmBuzz_1/Result<9>)
+     FDR:D                     0.176          alarmBuzz_1/waitTime_9
+    ----------------------------------------
+    Total                      3.995ns (2.780ns logic, 1.216ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'uclock'
+  Total number of paths / destination ports: 88 / 88
+-------------------------------------------------------------------------
+Offset:              4.340ns (Levels of Logic = 2)
+  Source:            buttons<3> (PAD)
+  Destination:       debounce3/count_18 (FF)
+  Destination Clock: uclock rising
+
+  Data Path: buttons<3> to debounce3/count_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.715   0.941  buttons_3_IBUF (buttons_3_IBUF)
+     LUT2:I1->O           20   0.479   1.313  debounce3/Mxor_new_xor0000_Result1 (debounce3/new_not0001_inv)
+     FDRE:R                    0.892          debounce3/count_0
+    ----------------------------------------
+    Total                      4.340ns (2.086ns logic, 2.254ns route)
+                                       (48.1% logic, 51.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'uclock'
+  Total number of paths / destination ports: 2156 / 15
+-------------------------------------------------------------------------
+Offset:              16.203ns (Levels of Logic = 10)
+  Source:            modeSetter_01/modeName (FF)
+  Destination:       LED<3> (PAD)
+  Source Clock:      uclock rising
+
+  Data Path: modeSetter_01/modeName to LED<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              28   0.626   1.851  modeSetter_01/modeName (modeSetter_01/modeName)
+     LUT3:I0->O            1   0.479   0.000  BCDMUX1/LED_mux0000<0>1981 (BCDMUX1/LED_mux0000<0>1981)
+     MUXF5:I1->O           2   0.314   0.768  BCDMUX1/LED_mux0000<0>198_f5 (BCDMUX1/LED_mux0000<0>198)
+     LUT4:I3->O            1   0.479   0.000  BCDMUX1/LED_mux0000<0>2031 (BCDMUX1/LED_mux0000<0>2031)
+     MUXF5:I1->O           1   0.314   0.740  BCDMUX1/LED_mux0000<0>203_f5 (BCDMUX1/LED_mux0000<0>203)
+     LUT3:I2->O            1   0.479   0.000  BCDMUX1/LED_mux0000<0>343_F (N372)
+     MUXF5:I0->O          14   0.314   1.304  BCDMUX1/LED_mux0000<0>343 (muxout<0>)
+     LUT3:I0->O            2   0.479   0.768  BCDLED1/Mrom_LED321 (N11)
+     LUT4:I3->O            1   0.479   0.740  BCDLED1/Mrom_LED3_SW0 (N161)
+     LUT4:I2->O            1   0.479   0.681  BCDLED1/Mrom_LED3 (LED_3_OBUF)
+     OBUF:I->O                 4.909          LED_3_OBUF (LED<3>)
+    ----------------------------------------
+    Total                     16.203ns (9.351ns logic, 6.852ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'debounce0/clean'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.441ns (Levels of Logic = 1)
+  Source:            countDown_01/states (FF)
+  Destination:       countingDown (PAD)
+  Source Clock:      debounce0/clean rising
+
+  Data Path: countDown_01/states to countingDown
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.626   0.906  countDown_01/states (countDown_01/states)
+     OBUF:I->O                 4.909          countingDown_OBUF (countingDown)
+    ----------------------------------------
+    Total                      6.441ns (5.535ns logic, 0.906ns route)
+                                       (85.9% logic, 14.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'alarmBuzz_1/buzzer_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.596ns (Levels of Logic = 2)
+  Source:            alarmBuzz_1/buzzer (LATCH)
+  Destination:       externalBuzz (PAD)
+  Source Clock:      alarmBuzz_1/buzzer_not0001 falling
+
+  Data Path: alarmBuzz_1/buzzer to externalBuzz
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.551   0.976  alarmBuzz_1/buzzer (alarmBuzz_1/buzzer)
+     LUT2:I0->O            1   0.479   0.681  externalBuzz1 (externalBuzz_OBUF)
+     OBUF:I->O                 4.909          externalBuzz_OBUF (externalBuzz)
+    ----------------------------------------
+    Total                      7.596ns (5.939ns logic, 1.657ns route)
+                                       (78.2% logic, 21.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_1/clk_1hz1'
+  Total number of paths / destination ports: 478 / 7
+-------------------------------------------------------------------------
+Offset:              15.384ns (Levels of Logic = 10)
+  Source:            countDown_01/num2_0 (FF)
+  Destination:       LED<3> (PAD)
+  Source Clock:      clock_1/clk_1hz1 rising
+
+  Data Path: countDown_01/num2_0 to LED<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              11   0.626   1.031  countDown_01/num2_0 (countDown_01/num2_0)
+     LUT3:I2->O            1   0.479   0.000  BCDMUX1/LED_mux0000<0>1981 (BCDMUX1/LED_mux0000<0>1981)
+     MUXF5:I1->O           2   0.314   0.768  BCDMUX1/LED_mux0000<0>198_f5 (BCDMUX1/LED_mux0000<0>198)
+     LUT4:I3->O            1   0.479   0.000  BCDMUX1/LED_mux0000<0>2031 (BCDMUX1/LED_mux0000<0>2031)
+     MUXF5:I1->O           1   0.314   0.740  BCDMUX1/LED_mux0000<0>203_f5 (BCDMUX1/LED_mux0000<0>203)
+     LUT3:I2->O            1   0.479   0.000  BCDMUX1/LED_mux0000<0>343_F (N372)
+     MUXF5:I0->O          14   0.314   1.304  BCDMUX1/LED_mux0000<0>343 (muxout<0>)
+     LUT3:I0->O            2   0.479   0.768  BCDLED1/Mrom_LED321 (N11)
+     LUT4:I3->O            1   0.479   0.740  BCDLED1/Mrom_LED3_SW0 (N161)
+     LUT4:I2->O            1   0.479   0.681  BCDLED1/Mrom_LED3 (LED_3_OBUF)
+     OBUF:I->O                 4.909          LED_3_OBUF (LED<3>)
+    ----------------------------------------
+    Total                     15.384ns (9.351ns logic, 6.033ns route)
+                                       (60.8% logic, 39.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rebounce0/b2state'
+  Total number of paths / destination ports: 130 / 7
+-------------------------------------------------------------------------
+Offset:              13.925ns (Levels of Logic = 8)
+  Source:            setAlarm/num0_0 (FF)
+  Destination:       LED<3> (PAD)
+  Source Clock:      rebounce0/b2state rising
+
+  Data Path: setAlarm/num0_0 to LED<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.626   1.023  setAlarm/num0_0 (setAlarm/num0_0)
+     LUT4:I1->O            1   0.479   0.000  BCDMUX1/LED_mux0000<0>287_F (N366)
+     MUXF5:I0->O           1   0.314   0.851  BCDMUX1/LED_mux0000<0>287 (BCDMUX1/LED_mux0000<0>287)
+     LUT3:I1->O            1   0.479   0.000  BCDMUX1/LED_mux0000<0>343_F (N372)
+     MUXF5:I0->O          14   0.314   1.304  BCDMUX1/LED_mux0000<0>343 (muxout<0>)
+     LUT3:I0->O            2   0.479   0.768  BCDLED1/Mrom_LED321 (N11)
+     LUT4:I3->O            1   0.479   0.740  BCDLED1/Mrom_LED3_SW0 (N161)
+     LUT4:I2->O            1   0.479   0.681  BCDLED1/Mrom_LED3 (LED_3_OBUF)
+     OBUF:I->O                 4.909          LED_3_OBUF (LED<3>)
+    ----------------------------------------
+    Total                     13.925ns (8.558ns logic, 5.367ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.14 secs
+ 
+--> 
+
+Total memory usage is 148256 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   40 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+
